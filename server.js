@@ -12,6 +12,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ---------------- HEALTH CHECK ----------------
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running!");
+});
+
 // ---------------- MONGO CONNECTION ----------------
 mongoose
   .connect(process.env.MONGO_URI, {
