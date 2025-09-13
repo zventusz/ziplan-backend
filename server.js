@@ -10,8 +10,9 @@ const fetch = (...args) =>
 
 const app = express();
 const allowedOrigins = [
-  "https://yourfrontend.vercel.app", // replace with actual Vercel URL
+  "https://ziplan.vercel.app", // replace with actual Vercel URL
   "http://localhost:19006",          // Expo web dev
+  "http://localhost:3000"      // (optional) local web dev
 ];
 
 app.use(cors({
